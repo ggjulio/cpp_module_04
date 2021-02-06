@@ -6,7 +6,7 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/06 04:51:14 by juligonz          #+#    #+#             */
-/*   Updated: 2021/02/06 06:24:39 by juligonz         ###   ########.fr       */
+/*   Updated: 2021/02/07 00:15:17 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,6 @@ public:
 	Peon(const Peon &);
 	Peon & operator=(const Peon &);
 	virtual ~Peon();
-
-	std::string getName() const;
 
 	virtual void polymorphed() const;
 

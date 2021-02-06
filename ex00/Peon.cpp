@@ -6,7 +6,7 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/06 04:51:12 by juligonz          #+#    #+#             */
-/*   Updated: 2021/02/06 06:23:11 by juligonz         ###   ########.fr       */
+/*   Updated: 2021/02/07 00:15:05 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,6 @@ Peon &Peon::operator=(const Peon &other){
 Peon::~Peon(){
 	std::cout << "Bleuark..." << std::endl;
 }
-
-std::string Peon::getName() const{ return _name;}
 
 void Peon::polymorphed() const{
 	std::cout << _name << " has been turned into a pink pony!" << std::endl;
