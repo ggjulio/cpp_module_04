@@ -6,7 +6,7 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/06 04:51:18 by juligonz          #+#    #+#             */
-/*   Updated: 2021/02/06 05:47:58 by juligonz         ###   ########.fr       */
+/*   Updated: 2021/02/06 06:07:22 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 #define SORCERER_HPP
 
 #include <string>
+#include "Victim.hpp"
+#include "Peon.hpp"
 
 class Sorcerer
 {
@@ -23,12 +25,14 @@ private:
 	
 	Sorcerer();
 public:
-	Sorcerer(std::string name, std::string title);
+	Sorcerer(const std::string & name, const std::string & title);
+	Sorcerer(const Sorcerer &);
 	Sorcerer & operator=(const Sorcerer &);
-	~Sorcerer();
+	virtual ~Sorcerer();
 
 	std::string getName() const;
 	std::string getTitle() const;
+	void polymorph(Victim const &)  const;
 
 };
 
