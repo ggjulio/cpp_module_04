@@ -6,7 +6,7 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/06 07:42:57 by juligonz          #+#    #+#             */
-/*   Updated: 2021/02/06 07:46:29 by juligonz         ###   ########.fr       */
+/*   Updated: 2021/02/06 08:08:31 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ private:
 	
 public:
 	PowerFist();
+	PowerFist(const PowerFist &);
+	PowerFist & operator=(const PowerFist &);
 	virtual ~PowerFist();
 
 	virtual void attack() const;

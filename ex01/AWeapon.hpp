@@ -6,7 +6,7 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/06 06:44:33 by juligonz          #+#    #+#             */
-/*   Updated: 2021/02/06 07:39:46 by juligonz         ###   ########.fr       */
+/*   Updated: 2021/02/06 07:54:55 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 class AWeapon
 {
 private:
+protected:
 	std::string _name;
 	int _apcost;
 	int _damage;

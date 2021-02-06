@@ -6,7 +6,7 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/06 06:58:55 by juligonz          #+#    #+#             */
-/*   Updated: 2021/02/06 07:45:07 by juligonz         ###   ########.fr       */
+/*   Updated: 2021/02/06 07:48:45 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ private:
 	
 public:
 	PlasmaRifle();
+	PlasmaRifle(const PlasmaRifle &);
+	PlasmaRifle & operator=(const PlasmaRifle &);	
 	virtual ~PlasmaRifle();
 
 	virtual void attack() const;
