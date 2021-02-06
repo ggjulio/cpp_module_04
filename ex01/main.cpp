@@ -6,7 +6,7 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/06 06:51:30 by juligonz          #+#    #+#             */
-/*   Updated: 2021/02/06 07:41:23 by juligonz         ###   ########.fr       */
+/*   Updated: 2021/02/06 08:10:39 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,12 @@
 
 int main()
 {
-	// Character *moi = new Character("moi");
-	// std::cout << *moi;
-	// Enemy *b = new RadScorpion();
+	Character *moi = new Character("moi");
+	std::cout << *moi;
+	Enemy *b = new RadScorpion();
 	AWeapon *pr = new PlasmaRifle();
 	AWeapon *pf = new PowerFist();
-	delete pr;
-	delete pf;
-	// moi->equip(pr);
+	moi->equip(pr);
 	// std::cout << *moi;
 	// moi->equip(pf);
 	// moi->attack(b);
