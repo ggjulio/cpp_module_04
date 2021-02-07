@@ -6,7 +6,7 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/07 07:16:21 by juligonz          #+#    #+#             */
-/*   Updated: 2021/02/07 11:36:10 by juligonz         ###   ########.fr       */
+/*   Updated: 2021/02/07 14:11:16 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,19 @@
 
 Squad::Squad(): _squad(NULL) {}
 
-Squad::~Squad(){
+Squad::Squad(const Squad &other) {
+	*this = other;
+}
+
+Squad & Squad::operator=(const Squad &other){
+	lstClear();
+	for (int i = 0; i < other.getCount(); i++)
+		push(other.getUnit(i)->clone());
+
+	return *this;
+}
+
+void Squad::lstClear(){
 	t_list *iterator = _squad;
 	t_list *next;
 
@@ -26,6 +38,11 @@ Squad::~Squad(){
 		delete iterator;
 		iterator = next;
 	}
+	_squad = NULL;
+}
+
+Squad::~Squad(){
+	lstClear();
 }
 
 int Squad::getCount() const

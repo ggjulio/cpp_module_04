@@ -6,7 +6,7 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/07 07:04:32 by juligonz          #+#    #+#             */
-/*   Updated: 2021/02/07 07:45:02 by juligonz         ###   ########.fr       */
+/*   Updated: 2021/02/07 13:33:00 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,16 @@ private:
 	{
 		ISpaceMarine *spaceMarine;
 		struct s_list *next;
+
 	} t_list;
 
+	void lstClear();
 	t_list *_squad;
 	
 public:
 	Squad();
+	Squad(const Squad &);
+	Squad & operator=(const Squad &);
 	~Squad();
 
 	virtual int getCount() const;
