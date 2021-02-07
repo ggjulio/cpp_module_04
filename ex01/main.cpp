@@ -6,7 +6,7 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/06 06:51:30 by juligonz          #+#    #+#             */
-/*   Updated: 2021/02/07 06:24:02 by juligonz         ###   ########.fr       */
+/*   Updated: 2021/02/07 06:36:43 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,20 @@ int main()
 	std::cout << "##################################" << std::endl;
 	me->recoverAP();
 	std::cout << *me;
+	me->recoverAP();
+	std::cout << *me;
+	std::cout << "##################################" << std::endl;
+	me->equip(pf);
+	b = new SuperMutant();
+	std::cout << *me;
+	me->attack(b);
+	std::cout << "|||    enemyHp:" << b->getHP() << " ||| "  << *me;
+	me->attack(b);
+	std::cout << "|||    enemyHp:" << b->getHP() << " ||| "  << *me;
+	me->attack(b);
+	std::cout << "|||    enemyHp:" << b->getHP() << " ||| "  << *me;
+	me->attack(b);
+	
 	
 	return 0;
 }
