@@ -6,7 +6,7 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/06 04:50:57 by juligonz          #+#    #+#             */
-/*   Updated: 2021/02/07 03:22:45 by juligonz         ###   ########.fr       */
+/*   Updated: 2021/02/07 03:32:38 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,15 +71,15 @@ int main(){
 		Sorcerer robert("Robert", "the Magnificent");
 		Parisien gabriel("Gabriel");
 		
-		std::cout << gabriel;
+		std::cout << robert << gabriel;
 		robert.polymorph(gabriel);
 	}
 	std::cout << "############################################################" << std::endl;
 	{
 		Sorcerer robert("Robert", "the Magnificent");
-		Lyonnais gabriel("Gabriel");
+		Lyonnais gabriel("Louis");
 		
-		std::cout << gabriel;
+		std::cout << robert << gabriel;
 		robert.polymorph(gabriel);
 	}
 	return 0;
