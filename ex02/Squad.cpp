@@ -6,7 +6,7 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/07 07:16:21 by juligonz          #+#    #+#             */
-/*   Updated: 2021/02/07 08:32:25 by juligonz         ###   ########.fr       */
+/*   Updated: 2021/02/07 11:36:10 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,18 @@
 
 Squad::Squad(): _squad(NULL) {}
 
-Squad::~Squad(){}
+Squad::~Squad(){
+	t_list *iterator = _squad;
+	t_list *next;
+
+	while (iterator)
+	{
+		next = iterator->next;
+		delete iterator->spaceMarine;
+		delete iterator;
+		iterator = next;
+	}
+}
 
 int Squad::getCount() const
 {
@@ -27,21 +38,21 @@ int Squad::getCount() const
 		len++;
 		iterator = iterator->next;
 	}
+	return len;
 }
 
 ISpaceMarine*	Squad::getUnit(int n) const
 {
 	t_list *iterator = _squad;
-	size_t len = 0;
 
 	while (iterator && n)
 	{
 		iterator = iterator->next;
 		n--;
 	}
-	if (!iterator)
-		return NULL;
-	return iterator->spaceMarine;
+	if (iterator)
+		return iterator->spaceMarine;
+	return NULL;
 }
 
 int	Squad::push(ISpaceMarine *unit_to_add)
@@ -49,7 +60,9 @@ int	Squad::push(ISpaceMarine *unit_to_add)
 	t_list *iterator = _squad;
 	size_t len = 1;
 	
-	if (!iterator)
+	if (unit_to_add == NULL)
+		return getCount();
+	if (iterator == NULL)
 	{	
 		_squad = new t_list();		
 		_squad->spaceMarine = unit_to_add;
@@ -58,12 +71,15 @@ int	Squad::push(ISpaceMarine *unit_to_add)
 	}
 	while (iterator->next)
 	{
+		if (iterator->spaceMarine == unit_to_add)
+			return getCount();
 		iterator = iterator->next;
 		len++;
 	}
-	if ()
-	_squad = new t_list();		
-	_squad->spaceMarine = unit_to_add;
-	_squad->next = NULL;
-	return len;
+	if (iterator->spaceMarine == unit_to_add)
+		return len;
+	iterator->next = new t_list();		
+	iterator->next->spaceMarine = unit_to_add;
+	iterator->next->next = NULL;
+	return len + 1;
 }

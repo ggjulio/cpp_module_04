@@ -6,7 +6,7 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/07 07:08:56 by juligonz          #+#    #+#             */
-/*   Updated: 2021/02/07 07:10:21 by juligonz         ###   ########.fr       */
+/*   Updated: 2021/02/07 08:50:51 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ private:
 	
 public:
 	TacticalMarine();
+	TacticalMarine(const TacticalMarine &);
+	TacticalMarine & operator=(const TacticalMarine &);
 	~TacticalMarine();
 
 	virtual ISpaceMarine *clone() const;
