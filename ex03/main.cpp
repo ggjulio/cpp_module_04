@@ -6,7 +6,7 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/07 14:58:08 by juligonz          #+#    #+#             */
-/*   Updated: 2021/02/07 16:16:55 by juligonz         ###   ########.fr       */
+/*   Updated: 2021/02/08 15:43:54 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #include "Cure.hpp"
 #include "Ice.hpp"
 #include "AMateria.hpp"
+#include "Character.hpp"
 #include "MateriaSource.hpp"
 
 int main()
