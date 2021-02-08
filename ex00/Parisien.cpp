@@ -6,7 +6,7 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/06 04:51:12 by juligonz          #+#    #+#             */
-/*   Updated: 2021/02/07 02:52:14 by juligonz         ###   ########.fr       */
+/*   Updated: 2021/02/08 08:55:22 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 Parisien::Parisien(const std::string &name): Victim(name)
 {
-	std::cout << "CONSTRUCTOR: Nous on a acces a la culture, like...anyway" << std::endl;
+	std::cout << "CONSTRUCTOR: Nous, a Paris intra muros, on a acces a la culture... like...anyway" << std::endl;
 }
 
 Parisien::Parisien(const Parisien &other): Victim(other._name)

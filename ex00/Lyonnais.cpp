@@ -6,7 +6,7 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/06 04:51:12 by juligonz          #+#    #+#             */
-/*   Updated: 2021/02/07 03:27:09 by juligonz         ###   ########.fr       */
+/*   Updated: 2021/02/08 08:48:02 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ Chu refait, y'a une gache ou ils vendent des bons tacos." << std::endl;
 }
 
 void Lyonnais::polymorphed() const{
-	std::cout << _name << " has been turned into a Lyonnais confine!" << std::endl;
+	std::cout << _name << " has been turned into a Grenoblois!" << std::endl;
 }
 
 std::ostream& operator <<(std::ostream& os, const Lyonnais &f)

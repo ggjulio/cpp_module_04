@@ -6,7 +6,7 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/06 04:50:57 by juligonz          #+#    #+#             */
-/*   Updated: 2021/02/07 03:32:38 by juligonz         ###   ########.fr       */
+/*   Updated: 2021/02/08 08:54:02 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,20 +53,10 @@ int main(){
 
 		victim.polymorphed();	
 	}
-	std::cout << "################## Another useless class #################" << std::endl;
-	std::cout << "################## Still boring........  #################" << std::endl;
-	{
-		Sorcerer robert("Robert", "the Magnificent");
-		Victim jim("Jimmy");
-		Peon joe("Joe");
-		
-		std::cout << robert << jim << joe;
-		robert.polymorph(jim);
-		robert.polymorph(joe);
-	}
 	std::cout << "############################################################" << std::endl;
 	std::cout << "################## Another 2 useless classes ###############" << std::endl;
 	std::cout << "################## Still boring........      ###############" << std::endl;
+	std::cout << "############################################################" << std::endl;
 	{
 		Sorcerer robert("Robert", "the Magnificent");
 		Parisien gabriel("Gabriel");
