@@ -62,11 +62,13 @@ int main()
 	vlc->push(pol);
 	std::cout << "getCount:" << vlc->getCount() << std::endl;
 	std::cout << "### Test copy/assignation:" << std::endl;
-	// ISquad *vlc2 = new Squad(*static_cast<Squad*>(vlc));
-	ISquad *vlc2 = vlc;
-	// vlc2 = NULL;
-	// vlc2 = vlc;
-	(void)vlc2;
+	ISquad *vlc2 = new Squad(*static_cast<Squad*>(vlc));
+
+	*static_cast<Squad*>(vlc2) = *static_cast<Squad*>(vlc);
+	*static_cast<Squad*>(vlc2) = *static_cast<Squad*>(vlc);
+	*static_cast<Squad*>(vlc2) = *static_cast<Squad*>(vlc);
+
+
 	std::cout << "### Test delete on squad with 3 marines (check valgrind):" << std::endl;
 	delete vlc;
 	delete vlc2;
