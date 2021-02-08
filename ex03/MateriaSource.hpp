@@ -6,7 +6,7 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/07 16:06:12 by juligonz          #+#    #+#             */
-/*   Updated: 2021/02/07 16:12:41 by juligonz         ###   ########.fr       */
+/*   Updated: 2021/02/07 16:14:23 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@
 #include "IMateriaSource.hpp"
 #include "AMateria.hpp"
 
-class MateriaSource
+class MateriaSource : public IMateriaSource
 {
 private:
-	IMateriaSource _sources[4];
+	IMateriaSource *_sources[4];
 public:
 	MateriaSource();
 	MateriaSource(const MateriaSource &);
