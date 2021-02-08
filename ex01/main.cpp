@@ -6,7 +6,7 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/06 06:51:30 by juligonz          #+#    #+#             */
-/*   Updated: 2021/02/07 06:36:43 by juligonz         ###   ########.fr       */
+/*   Updated: 2021/02/08 09:20:08 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,23 +36,42 @@ int main()
 	std::cout << *me;
 	me->attack(b);
 	std::cout << *me;
-	std::cout << "##################################" << std::endl;
-	me->recoverAP();
-	std::cout << *me;
-	me->recoverAP();
-	std::cout << *me;
-	std::cout << "##################################" << std::endl;
+	
+	std::cout << "############### Test RecoverAP MAX ###################" << std::endl;
+	me->recoverAP(); std::cout << *me;
+	me->recoverAP(); std::cout << *me;
+	
+	std::cout << "############### Test Super Mutant Damage reduction  ################" << std::endl;
 	me->equip(pf);
 	b = new SuperMutant();
 	std::cout << *me;
-	me->attack(b);
-	std::cout << "|||    enemyHp:" << b->getHP() << " ||| "  << *me;
-	me->attack(b);
-	std::cout << "|||    enemyHp:" << b->getHP() << " ||| "  << *me;
-	me->attack(b);
-	std::cout << "|||    enemyHp:" << b->getHP() << " ||| "  << *me;
+	
+	me->attack(b); std::cout << "|||    enemyHp:" << b->getHP() << " ||| "  << *me;
+	me->attack(b); std::cout << "|||    enemyHp:" << b->getHP() << " ||| "  << *me;
+	me->attack(b); std::cout << "|||    enemyHp:" << b->getHP() << " ||| "  << *me;
 	me->attack(b);
 	
+	std::cout << "############### Test AP MIN   ##################" << std::endl;
+	b = new SuperMutant();
 	
+	me->attack(b); std::cout << "|||    enemyHp:" << b->getHP() << " ||| "  << *me;
+	me->attack(b); std::cout << "|||    enemyHp:" << b->getHP() << " ||| "  << *me;
+	me->attack(b); std::cout << "|||    enemyHp:" << b->getHP() << " ||| "  << *me;
+
+	me->recoverAP();
+
+	me->attack(b); std::cout << "|||    enemyHp:" << b->getHP() << " ||| "  << *me;
+	me->attack(b); std::cout << "|||    enemyHp:" << b->getHP() << " ||| "  << *me;
+	me->attack(b); std::cout << "|||    enemyHp:" << b->getHP() << " ||| "  << *me;
+	
+	std::cout << "############### Ok. KILL HIM !  ################" << std::endl;
+	me->recoverAP();
+	me->recoverAP();
+	me->recoverAP();
+	me->recoverAP();
+
+	me->attack(b); std::cout << "|||    enemyHp:" << b->getHP() << " ||| "  << *me;
+	me->attack(b);
+
 	return 0;
 }
