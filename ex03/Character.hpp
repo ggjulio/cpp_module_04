@@ -6,7 +6,7 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/08 14:53:14 by juligonz          #+#    #+#             */
-/*   Updated: 2021/02/08 15:52:12 by juligonz         ###   ########.fr       */
+/*   Updated: 2021/02/08 22:11:33 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,17 @@
 #include "AMateria.hpp"
 
 
-class Character : ICharacter
+class Character : public ICharacter
 {
 private:
+	std::string _name;
 	AMateria *_materias[4];
-public:
+	
 	Character();
+public:
+	Character(std::string name);
+	Character(const Character &);
+	Character & operator=(const Character &);
 	~Character();
 
 	std::string const &getName() const;

@@ -6,13 +6,15 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/07 14:51:47 by juligonz          #+#    #+#             */
-/*   Updated: 2021/02/07 15:01:10 by juligonz         ###   ########.fr       */
+/*   Updated: 2021/02/08 22:13:33 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ICHARACTER_H
 #define ICHARACTER_H
 
+#include <string>
+class AMateria;
 
 class ICharacter
 {
