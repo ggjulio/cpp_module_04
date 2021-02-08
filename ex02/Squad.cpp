@@ -6,7 +6,7 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/07 07:16:21 by juligonz          #+#    #+#             */
-/*   Updated: 2021/02/07 14:11:16 by juligonz         ###   ########.fr       */
+/*   Updated: 2021/02/08 12:50:55 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 Squad::Squad(): _squad(NULL) {}
 
-Squad::Squad(const Squad &other) {
+Squad::Squad(const Squad &other): _squad(NULL) {
 	*this = other;
 }
 
