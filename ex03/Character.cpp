@@ -6,7 +6,7 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/08 14:53:12 by juligonz          #+#    #+#             */
-/*   Updated: 2021/02/10 07:06:53 by juligonz         ###   ########.fr       */
+/*   Updated: 2021/02/10 08:54:04 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 Character::Character(std::string name): _name(name), _materias(){}
 
-Character::Character(const Character &other){
+Character::Character(const Character &other): _materias(){
 	*this = other;
 }
 
