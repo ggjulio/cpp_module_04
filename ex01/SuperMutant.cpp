@@ -6,7 +6,7 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/07 04:07:10 by juligonz          #+#    #+#             */
-/*   Updated: 2021/02/07 06:45:34 by juligonz         ###   ########.fr       */
+/*   Updated: 2021/02/10 08:31:58 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,6 @@ SuperMutant::~SuperMutant(){
 }
 
 void SuperMutant::takeDamage(int damage){
-	Enemy::takeDamage(damage - _damageReduction);
 	_damageReduction+=3;
+	Enemy::takeDamage(damage - _damageReduction-3);
 }

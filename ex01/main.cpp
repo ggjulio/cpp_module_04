@@ -6,7 +6,7 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/06 06:51:30 by juligonz          #+#    #+#             */
-/*   Updated: 2021/02/08 09:20:08 by juligonz         ###   ########.fr       */
+/*   Updated: 2021/02/10 08:35:00 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ int main()
 	me->attack(b); std::cout << "|||    enemyHp:" << b->getHP() << " ||| "  << *me;
 	me->attack(b);
 	
+	delete b;
 	std::cout << "############### Test AP MIN   ##################" << std::endl;
 	b = new SuperMutant();
 	
@@ -73,5 +74,10 @@ int main()
 	me->attack(b); std::cout << "|||    enemyHp:" << b->getHP() << " ||| "  << *me;
 	me->attack(b);
 
+
+	delete me;
+	delete pr;
+	delete pf;
+	delete b;
 	return 0;
 }
