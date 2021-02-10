@@ -6,7 +6,7 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/07 14:32:08 by juligonz          #+#    #+#             */
-/*   Updated: 2021/02/07 15:29:46 by juligonz         ###   ########.fr       */
+/*   Updated: 2021/02/10 05:54:16 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,9 @@ class AMateria
 {
 private:
 	std::string	_type;
+	unsigned int _xp;
 
 	AMateria();
-protected:
-	unsigned int _xp;
 
 public:
 	AMateria(std::string const &type);

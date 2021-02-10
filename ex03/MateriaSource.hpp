@@ -6,7 +6,7 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/07 16:06:12 by juligonz          #+#    #+#             */
-/*   Updated: 2021/02/08 21:54:35 by juligonz         ###   ########.fr       */
+/*   Updated: 2021/02/10 07:23:55 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,12 @@
 class MateriaSource : public IMateriaSource
 {
 private:
-	// IMateriaSource *_sources[4];
-public:
-	MateriaSource();
+	AMateria *_sources[4];
+	
 	MateriaSource(const MateriaSource &);
 	MateriaSource & operator=(const MateriaSource &);
+public:
+	MateriaSource();
 	~MateriaSource();
 	
 	virtual void learnMateria(AMateria *);

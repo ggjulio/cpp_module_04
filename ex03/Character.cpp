@@ -6,7 +6,7 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/08 14:53:12 by juligonz          #+#    #+#             */
-/*   Updated: 2021/02/08 22:15:55 by juligonz         ###   ########.fr       */
+/*   Updated: 2021/02/10 07:06:53 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,14 @@ Character & Character::operator=(const Character &other){
 	_name = other._name;
 	for (size_t i = 0; i < sizeof(_materias)/sizeof(AMateria *); i++)
 		if (_materias[i] != NULL)
+		{
 			delete _materias[i];
+			_materias[i] = NULL;
+		}
 
 	for (size_t i = 0; i < sizeof(_materias) >> 3; i++)
-		_materias[i] = other._materias[i]->clone();
+		if (_materias[i] != NULL)
+			_materias[i] = other._materias[i]->clone();
 
 	return *this;
 }
