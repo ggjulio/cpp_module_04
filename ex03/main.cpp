@@ -6,7 +6,7 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/07 14:58:08 by juligonz          #+#    #+#             */
-/*   Updated: 2021/02/10 07:38:26 by juligonz         ###   ########.fr       */
+/*   Updated: 2021/02/10 08:01:23 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,10 +42,26 @@ int main()
 	moi->use(1, *bob);
 	moi->use(1, *bob);
 	std::cout << "<Materia test> type:" << tmp->getType() << " | actual xp:" << tmp->getXP() << std::endl;
-	std::cout << "####  Test max inventory materia" << std::endl;
+	std::cout << "####  Test max inventory materia (then test leaks)" << std::endl;
+	moi->equip(src->createMateria("cure"));
+	moi->equip(src->createMateria("cure"));
+	tmp = src->createMateria("cure");
+	moi->equip(tmp);
+	std::cout << "####  Test DeepCopy MateriaSource (test leaks)" << std::endl;
+	IMateriaSource *src2 = new MateriaSource(*static_cast<MateriaSource*>(src));
+	
+
+	
+	ICharacter *boby= new Character(*static_cast<Character*>(bob));
+	ICharacter *toby= new Character(*static_cast<Character*>(bob));
 
 	delete bob;
+	delete boby;
+	delete toby;
 	delete moi;
 	delete src;
+	delete src2;
+	
+	delete tmp;
 	return 0;
 }
