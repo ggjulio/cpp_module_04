@@ -6,7 +6,7 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/07 15:10:29 by juligonz          #+#    #+#             */
-/*   Updated: 2021/02/08 18:50:04 by juligonz         ###   ########.fr       */
+/*   Updated: 2021/02/10 07:34:55 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,6 @@ AMateria* Cure::clone() const {
 	return new Cure(*this);
 }
 void Cure::use(ICharacter& target) {
+	AMateria::use(target);
 	std::cout << "* heals " << target.getName() << "'s wounds *" << std::endl;
 }
